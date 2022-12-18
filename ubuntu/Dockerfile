@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
-RUN export PATH=$PATH:/usr/local/go/bin
-RUN apt update && apt install openssh-server sudo software-properties-common wget git dotnet-sdk-6.0 docker -y
+RUN echo 'PATH=$PATH:/usr/local/go/bin' >> /etc/profile
+RUN apt update && apt install openssh-server build-essential sudo software-properties-common wget git dotnet-sdk-6.0 docker -y
 
 RUN apt install ca-certificates curl gnupg lsb-release -y
 RUN mkdir -p /etc/apt/keyrings

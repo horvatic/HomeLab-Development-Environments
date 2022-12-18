@@ -1,10 +1,18 @@
 # HomeLab-Development-Environments
 
-## Build
-To build
-```docker build . -t homelab:latest```
+## Overview
+Docker images that allow a connection with ssh, or vs code with Remote Development using SSH https://code.visualstudio.com/docs/remote/ssh
 
-## Run
-To run a homelab env
-```docker run -ti -d -p 3000:22 -v /var/run/docker.sock:/var/run/docker.sock homelab:latest```
-and connect with ssh, or vs code with Remote Development using SSH https://code.visualstudio.com/docs/remote/ssh
+## Ubuntu
+Path: Ubuntu
+
+Installed: Docker, dotnet, go, make
+
+## Build Ubuntu
+make build-ubuntu
+
+## Run Ubuntu 
+make run-ubuntu
+
+## Stop and Remove Ubuntu
+make clean-ubuntu
