@@ -1,18 +1,12 @@
 # HomeLab-Development-Environments
 
 ## Overview
-Docker images that allow a connection with ssh, or vs code with Remote Development using SSH https://code.visualstudio.com/docs/remote/ssh
+Docker dev environment images that allow a connection with ssh and UI
 
-## Ubuntu
-Path: Ubuntu
+## debian-ui
 
-Installed: Docker, dotnet, go, make
+Docker dev environment image with http UI
 
-## Build Ubuntu
-make build-ubuntu
+## ubuntu-ssh
 
-## Run Ubuntu 
-make run-ubuntu
-
-## Stop and Remove Ubuntu
-make clean-ubuntu
+Docker dev environment image with ssh interface
