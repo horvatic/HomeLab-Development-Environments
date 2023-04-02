@@ -7,7 +7,7 @@ RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install xpra openbox obconf tint2 -y
 
 # System
-RUN apt-get install sudo xterm curl gpg -y
+RUN apt-get install sudo xterm xfce4-terminal curl gpg -y
 
 # Extras
 RUN apt-get install firefox-esr -y
