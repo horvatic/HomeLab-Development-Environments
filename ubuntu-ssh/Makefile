@@ -1,16 +1,16 @@
-.PHONY: build-ubuntu
+.PHONY: build
 .NOTPARALLEL:
-build-ubuntu:
-	cd ubuntu && docker build . -t homelab:latest
+build:
+	docker build . -t homelab:latest
 
-.PHONY: run-ubuntu
+.PHONY: run
 .NOTPARALLEL:
-run-ubuntu: build-ubuntu
+run: build
 	docker run --name homelab -ti -d -p 3000:22 -v /var/run/docker.sock:/var/run/docker.sock homelab:latest
 
-.PHONY: clean-ubuntu
+.PHONY: clean
 .NOTPARALLEL:
-clean-ubuntu:
+clean:
 	docker kill homelab
 	docker rm homelab
 
